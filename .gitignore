@@ -1,0 +1,6 @@
+.idea
+venv
+data
+*.csv
+*.html
+main.py
