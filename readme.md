@@ -12,8 +12,8 @@ Note : Be careful with the downloaded data as it may contain sensitive informati
 
 ## Get the number of reactions for each user in the conversation
 ### Example
-from messengerParser import *
-path = "data/facebook-<username>/messages/inbox/<conversation_name>/"   # Path to the directory where your html files are
+from messengerParser import *  <br/>
+path = "data/facebook-<username>/messages/inbox/<conversation_name>/"   # Path to the directory where your html files are  
 result = getReceivedReactionsFromDir(path)  
-print(result.to_string)                                                 # Print redult in the console  
+print(result.to_string)                                                 # Print result in the console  
 result.to_csv(r'receivedReactions.csv')                                 # write results to csv  
