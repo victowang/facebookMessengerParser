@@ -2,5 +2,10 @@
 venv
 data
 *.csv
+*.csv#
 *.html
 main.py
+TODO.md
+__pycache__/
+
+
