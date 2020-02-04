@@ -1,7 +1,13 @@
 # Parser for Facebook messenger
 
 ## Why ?
-Explore your messenger data, you might find some fun or interesting insight.
+Explore your messenger data, you might find some fun or interesting insight about your friends who are in the same conversation.
+
+#### Examples :  
+* Who uses the most reactions
+* Who receives the most reactions
+* Who make people react with 😠
+* Who is the most likely to react with 😠
 
 ## What can this parser do ?
 
@@ -18,9 +24,18 @@ You can download your Facebook messenger data in your [personal information](htt
 Note : Be careful with the downloaded data as it may contain sensitive information concerning you or your contacts
 
 ## Get the number of reactions for each user in the conversation
-### Example
+#### Example :
 from messengerParser import *  <br/>
-path = "data/facebook-<username>/messages/inbox/<conversation_name>/"   # Path to the directory where your html files are  
+path = "data/facebook-your_username/messages/inbox/conversation_name/"   # Path to the directory where your html files are  
 result = getReceivedReactionsFromDir(path)  # Get dataframe with data about received reactions
 print(result.to_string())                                                 # Print result in the console  
-result.to_csv(r'receivedReactions.csv')                                 # Write results to csv  
+result.to_csv(r'receivedReactions.csv')                                 # Write results to csv 
+
+## Display the data with Dash  
+
+##### In project root run :
+python dashApp/app.py  
+
+##### with your browser go to :  
+http://127.0.0.1:8050/
+ 
