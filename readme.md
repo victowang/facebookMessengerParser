@@ -33,6 +33,9 @@ result.to_csv(r'receivedReactions.csv')                                 # Write 
 
 ## Display the data with Dash  
 
+* Bar charts of sent and received reactions
+* Radar charts representing each user
+
 ##### In project root run :
 python dashApp/app.py  
 

@@ -33,3 +33,13 @@ def received(filename):
         userDict['name'] = name
         data.append(userDict)
     return data
+
+def sent_radar_charts(filename):
+    dataframe = pd.read_csv(filename)
+    charts = []
+    users = list(dataframe.head())[2:]
+    theta = ['😍', '😆', '😮', '😢', '😠', '❤', 'Thumb up', 'Thumb down']
+    for name in users:
+        r = dataframe[name][1:]
+        charts.append({'name': name, 'r':r, 'theta': theta})
+    return charts
