@@ -40,6 +40,11 @@ def sent_radar_charts(filename):
     users = list(dataframe.head())[2:]
     theta = ['😍', '😆', '😮', '😢', '😠', '❤', 'Thumb up', 'Thumb down']
     for name in users:
-        r = dataframe[name][1:]
+        r = dataframe[name][1:].to_list()
+        max = 0
+        for val in r:
+            if val >= max:
+                max = val
+        r = [val/max for val in r]
         charts.append({'name': name, 'r':r, 'theta': theta})
     return charts

@@ -41,4 +41,8 @@ python dashApp/app.py
 
 ##### with your browser go to :  
 http://127.0.0.1:8050/
+
+##### Needed to write charts ad images:  
+$ npm install -g electron@1.8.4 orca  
+$ pip install psutil requests
  

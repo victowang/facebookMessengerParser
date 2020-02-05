@@ -32,7 +32,7 @@ layout = html.Div(children=[
 )
 
 radio_charts = csv_to_data.sent_radar_charts("data/csv/sentReactions.csv")
-for radio_chart_dict in radio_charts:
+for radio_chart_dict in radio_charts[:]:
     fig = go.Figure(
         data=go.Scatterpolar(
             r=radio_chart_dict['r'],
