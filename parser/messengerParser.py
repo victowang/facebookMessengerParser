@@ -20,7 +20,7 @@ def getReceivedReactionsFromFile(dataframe, filename):
             dataframe["Total"]['nb_react'] += 1
             dataframe[name]['nb_react'] += 1
             emoji = reaction.string[0]
-            if emoji in dataframe.index[1:7]:
+            if emoji in dataframe.index[2:8]:
                 dataframe[name][emoji] += 1
                 dataframe["Total"][emoji] += 1
             else:
@@ -30,6 +30,8 @@ def getReceivedReactionsFromFile(dataframe, filename):
                 elif (emoji == b'\xf0\x9f\x91\x8d'.decode()):
                     dataframe[name]['Thumb up'] += 1
                     dataframe["Total"]['Thumb up'] += 1
+                else:
+                    print("Emoji non pris en charge : " + emoji)
     return dataframe
 
 
@@ -69,6 +71,8 @@ def getSentReactionsFromFile(dataframe, filename):
                 elif (emoji == b'\xf0\x9f\x91\x8d'.decode()):
                     dataframe[name]['Thumb up'] += 1
                     dataframe["Total"]['Thumb up'] += 1
+                else :
+                    print("Emoji non pris en charge : " + emoji)
     return dataframe
 
 

@@ -6,8 +6,6 @@ Explore your messenger data, you might find some fun or interesting insight abou
 #### Examples :  
 * Who uses the most reactions
 * Who receives the most reactions
-* Who make people react with 😠
-* Who is the most likely to react with 😠
 
 ## What can this parser do ?
 
@@ -42,7 +40,7 @@ python dashApp/app.py
 ##### with your browser go to :  
 http://127.0.0.1:8050/
 
-##### Needed to write charts ad images:  
-$ npm install -g electron@1.8.4 orca  
-$ pip install psutil requests
+## Notes
+
+It would probably be more efficient code the same process with data from facebook imported as JSON.
  
